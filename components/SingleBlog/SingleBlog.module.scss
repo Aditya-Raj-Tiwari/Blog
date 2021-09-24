@@ -1,0 +1,62 @@
+$white: #fff;
+@mixin desktop {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+.wrapper {
+  img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+  }
+
+  &:after {
+    content: "\A";
+    position: absolute;
+    width: 100%;
+    height: 450px;
+    top: 0;
+    left: 0;
+    background: rgba(17, 23, 61, 0.7);
+  }
+  .headers {
+    z-index: 9;
+    position: absolute;
+    top: 6%;
+    transform: translatex(-50%);
+    left: 50%;
+    text-align: center;
+    color: $white;
+
+    @include desktop {
+      top: 10%;
+    }
+
+    .heroHeader {
+      font-size: 2.5rem;
+    }
+  }
+  .categorie_header {
+    padding-right: 3rem;
+    font-weight: bold;
+  }
+}
+
+.container {
+  z-index: 9;
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+
+  .content {
+    background-color: $white;
+    position: absolute;
+    top: -90px;
+    padding: 1rem;
+    @include desktop {
+      padding: 3rem 10rem;
+    }
+  }
+}

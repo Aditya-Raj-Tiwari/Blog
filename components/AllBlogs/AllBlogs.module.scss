@@ -1,0 +1,46 @@
+@mixin desktop {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.content-inner {
+  padding: 2rem 1rem;
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .categorie-header {
+    span {
+      padding-right: 6rem;
+      font-weight: bold;
+    }
+  }
+
+  .content .content_para {
+    height: 130px;
+    white-space: break-spaces;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include desktop {
+      height: 100px;
+    }
+  }
+
+  @include desktop {
+    padding: 3rem 5rem;
+  }
+}

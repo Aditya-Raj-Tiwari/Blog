@@ -1,0 +1,13 @@
+.button {
+  display: flex;
+  flex-direction: row;
+
+  svg {
+    width: 60px;
+    height: 20px;
+  }
+
+  a{
+      font-weight: bold;
+  }
+}
